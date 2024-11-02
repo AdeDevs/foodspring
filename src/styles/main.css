@@ -9,7 +9,7 @@
   
   .home .landing header{
     margin: 20px 0;
-    padding: 0 10px;
+    padding: 0 20px;
     display: inline-flex;
     box-sizing: border-box;
     width: 100%;
@@ -47,10 +47,12 @@
 
 h3 {
   font-size: 20px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 20px 0;
   transition: 3s;
   position: relative;
+  font-size: 19px;
+  font-weight: 500;
   width: 70%;
   z-index: 10;
   -webkit-background-clip: text;
@@ -71,14 +73,259 @@ h3:hover {
   transform: scaleX(1);
 }
 
-@media (max-width: 500px) {
-    h3 {
-        width: 100%;
-    }
+.advantages {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-@media (max-width:450px) {
+.advantages > h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.advantages .advantages-card {
+  display: inline-flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 20px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.img, .img2, .img3, .img4 {
+  height: 600px;
+  width: 400px;
+  background-image: url(../assets/holding.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img2 {
+  background-image: url(../assets//drinking.jpg);
+  min-width: 500px;
+  background-position: bottom;
+  height: 350px;
+}
+.img3 {
+  background-image: url(../assets/male-workout.jpg);
+  width: 400px;
+}
+.img4 {
+  background-image: url(../assets/girl.jpg);
+}
+
+
+.advantages-info {
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.advantages-info h1 {
+  width: 35%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.advantages-info p {
+  width: 60%;
+  font-size: 13px;
+  color: #929292;
+}
+
+.essentials {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.essentials nav {
+  padding: 10px 0;
+}
+
+.essentials nav h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.essentials .essentials-card {
+  display: inline-flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 20px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.essentials .img, .essentials .img2, .essentials .img3, .essentials .img4 {
+  height: 300px;
+  width: 400px;
+  background-image: url(../assets/muscle-pack-basic.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.essentials .img2 {
+  background-position: center;
+  background-image: url(../assets/muscle-pack-pro.jpg);
+  height: 400px;
+  width: 600px;
+}
+.essentials .img3 {
+  background-image: url(../assets/shape-shake-basic.jpg);
+}
+.essentials .img4 {
+  background-image: url(../assets/shape-shake-pro.jpg);
+  width: 600px;
+  height: 350px;
+}
+
+.essentials-info {
+  border-bottom: 1px solid #929292;
+  padding: 15px 0;
+}
+
+.essentials-info header {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 10px ;
+  width: 100%;
+}
+
+.essentials-info header h1 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.essentials-info header h2 {
+  font-size: 13px;
+  color: #929292;
+}
+
+.essentials-info button {
+  border-radius: 20px;
+  background-color: #d6d6d6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  margin: 10px 0 20px 0;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.essentials-info p {
+  font-size: 13px;
+  color: #929292;
+}
+
+.transform {
+  padding: 10px 20px;
+  display: inline-flex;
+  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.transform section {
+  width: 45%;
+  height: fit-content;
+}
+
+.transform h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.transform p {
+  font-size: 14px;
+  width: 70%;
+  margin: 70px 0;
+}
+
+.transform button {
+  border-radius: 20px;
+  border: 2px solid #929292;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.transform .transform-bg {
+  background-image: url(../assets/female-workout.jpg);
+  background-position: top;
+  background-size: cover;
+  width: 37%;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
+
+@media (max-width: 700px) {
+  .transform {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .transform h1, .transform p {
+    width: 100%;
+  }
+  .transform p {
+    margin: 40px 0;
+  }
+  .transform section {
+    width: 100%;
+  }
+  .transform .transform-bg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .advantages, .landing, .essentials, .h3, .transform {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+    h3 {
+        width: 100%;
+        box-sizing: border-box;
+    }
     .home .landing header {
         display: block;
+    }
+    .landing header p {
+      margin: 10px 0;
+    }
+    .landing .bg {
+      height: 70vh;
+    }
+    .img, .img3, .img4 {
+      height: 500px;
+    }
+    .img2 {
+      width: 300px;
+    }
+    .essentials nav {
+      display: block;
+    }
+    .essentials nav button {
+      float: right;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+    .essentials .img, .essentials .img2, .essentials .img3, .essentials .img4 {
+      width: 300px;
+      height: 300px;
     }
 }
