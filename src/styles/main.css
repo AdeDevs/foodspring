@@ -214,12 +214,17 @@ h3:hover {
 .essentials-info button {
   border-radius: 20px;
   background-color: #d6d6d6;
-  border: none;
+  border: 2px solid #929292;
   padding: 10px 20px;
   font-size: 12px;
   margin: 10px 0 20px 0;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  transition: .4s ease-in-out;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .essentials-info p {
@@ -261,6 +266,12 @@ h3:hover {
   font-family: "Montserrat", sans-serif;
   padding: 10px 20px;
   cursor: pointer;
+  transition: .5s ease-in-out;
+  &:hover {
+    background-color: #f2f2f2;
+    border: 2px solid #000;
+    color: #000;
+  }
 }
 
 .transform .transform-bg {
@@ -293,16 +304,20 @@ h3:hover {
 }
 
 @media (max-width: 500px) {
-  .advantages, .landing, .essentials, .h3, .transform {
+  .advantages, .essentials, .transform {
     padding-left: 10px;
     padding-right: 10px;
   }
     h3 {
         width: 100%;
         box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .home .landing header {
         display: block;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .landing header p {
       margin: 10px 0;
