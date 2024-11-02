@@ -113,7 +113,7 @@ nav button {
   color: #000;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 490px) {
     .about {
         display: none;
     }
@@ -122,7 +122,7 @@ nav button {
     }
 }
 
-@media (min-width: 451px) {
+@media (min-width: 491px) {
     .menu, .overlay, .overlay.show {
         display: none;
     }
