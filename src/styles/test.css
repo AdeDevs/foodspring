@@ -1,0 +1,22 @@
+.test {
+    background-color: red;
+}
+
+.test .hover {
+    height: 300px;
+    background-image: url(../assets/drinking.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+}
+
+.test:hover .info {
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+}
