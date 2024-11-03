@@ -247,8 +247,9 @@ h3:hover {
 }
 
 .transform h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-weight: 600;
+  width: 50%;
   line-height: 100%;
 }
 
@@ -278,11 +279,150 @@ h3:hover {
   background-image: url(../assets/female-workout.jpg);
   background-position: top;
   background-size: cover;
-  width: 37%;
+  width: 40%;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 85vh;
 }
 
+
+.questions {
+  margin: 50px 0 20px 0;
+  padding: 10px 20px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.questions > h1 {
+  font-size: 3em;
+  line-height: 100%;
+  font-weight: 500;
+  width: 30%;
+}
+
+.faq {
+  background-color: #f2f2f2;
+  width: 40%;
+}
+
+.faq section {
+  border-top: 2px solid #d6d6d6;
+  padding: 12px 0;
+  &:nth-last-child(1) {
+    border-bottom: 2px solid #d6d6d6;
+  }
+}
+
+.faq button {
+  border: none;
+  background-color: #000;
+  border-radius: 50px;
+  padding: 3px;
+}
+
+.faq img {
+  width: 12px;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+.faq img:hover {
+  transform: rotate(360deg);
+}
+
+.faq header {
+  display: inline-flex;
+  padding: 5px;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  font-weight: 500;
+  background-color: #f2f2f2;
+}
+
+.more {
+  max-height: 0;
+  overflow: hidden;
+  width: 95%;
+  transition: max-height 0.5s ease;
+  padding: 0 5px;
+}
+
+.more.active {
+  max-height: 120px;
+  padding: 5px;
+  overflow: visible;
+}
+
+.more p {
+  margin:  0 auto;
+  font-size: 14px;
+  width: 95%;
+  color: #333;
+}
+
+footer {
+  margin-top: 100px;
+  background-color: #d6d6d6;
+  padding: 50px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+footer header {
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+footer h1 {
+  font-size: 20px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+}
+
+footer span {
+  margin: 10px 10px 0 0;
+  font-size: 20px;
+  color: #3c3c3c;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  &:hover {
+    color: #000;
+  }
+}
+
+footer .lists {
+  display: inline-flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+footer ul li {
+  color: #3c3c3c;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  &:hover {
+    color: #000;
+  }
+}
+
+footer h5 {
+  text-align: center;
+  color: #3c3c3c;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
 
 @media (max-width: 700px) {
   .transform {
@@ -300,6 +440,23 @@ h3:hover {
   }
   .transform .transform-bg {
     width: 100%;
+  }
+  .questions {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .questions > h1 {
+    width: 100%;
+    font-size: 2.5em;
+  }
+  .faq {
+    width: 100%;
+  }
+  footer {
+    margin-top: 70px;
+  }
+  footer .lists {
+    width: 60%;
   }
 }
 
@@ -343,4 +500,33 @@ h3:hover {
       width: 300px;
       height: 300px;
     }
+    footer header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    footer h1 {
+      text-align: right;
+    }
+    footer section {
+      width: 100%;
+      text-align: right;
+    }
+    footer .lists {
+      width: 100%;
+    }
+    .more.active {
+      max-height: 160px;
+    }
+}
+
+@media (max-width:400px) {
+  .more.active {
+    max-height: 30vh;
+  }
+}
+
+@media (max-width:260px) {
+  .more.active {
+    max-height: 50vh;
+  }
 }
