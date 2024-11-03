@@ -12,7 +12,7 @@ function NavBar() {
         <nav>
             <div>
                 <button>foodspring</button>
-                <button onClick={toggleCart} className="uk">UK</button>
+                <button className="uk">UK</button>
             </div>
             <div className="about">
                 <button>About Us</button>
